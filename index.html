@@ -20,7 +20,9 @@
   <h3>1. A quiz in Slidify</h3>
   
 <div class="quiz quiz-single well ">
-  <p>A simple quiz question: \(sin(2pi)=\)</p>
+  <p><em>(Sorry but the quiz widget only seems to work in io2012 )</em></p>
+
+<p>A simple quiz question: \(sin(2pi)=\)</p>
 
 <ol>
 <li><em>0</em></li>
@@ -51,19 +53,33 @@
 <li>Can we get a random question from a set of questions?</li>
 </ul>
 
+<p>YES, we actually can with R!</p>
+
+<pre><code class="r">question &lt;&lt;- c(&quot;What is the capital of Love?&quot;, &quot;In what country did Shakespeare live and work?&quot;, &quot;What&#39;s the purpose of human life?&quot;)
+correct &lt;&lt;- c(&quot;Paris, mon Dieu!&quot;, &quot;Great Britain&quot;, &quot;Paying taxes&quot;)
+alt1 &lt;&lt;- c(&quot;London, you fool!&quot;, &quot;USA&quot;, &quot;Love&quot;)
+alt2 &lt;&lt;- c(&quot;Berlin, ohnehin!&quot;, &quot;Italy&quot;, &quot;See Napels and die&quot;)
+alt3 &lt;- c(&quot;My place, cherry!&quot;, &quot;Oosterbeek (where&#39;s that!?)&quot;, &quot;God only knows!&quot;)
+hint &lt;&lt;- c(&quot;Another croissant, ma cherie?&quot;, &quot;It&#39;wasn&#39;t in the USSR&quot;, &quot;This hint costs you 100$ incl. VAT&quot;)
+answer &lt;&lt;- c(&quot;Does Love need a place?&quot;, &quot;Where they eat beans at breakfast&quot;, &quot;Ask your local tax authority&quot;)
+n &lt;&lt;- sample(1:3,size=1)
+</code></pre>
+
+<p>A sampled quiz question: <code>question[n]</code></p>
+
 </article>
 
 <article class="" id="slide-3" style="background:;">
   <h3>3. Let&#39;s see ...</h3>
   
 <div class="quiz quiz-single well ">
-  <p>A sampled quiz question: What is the capital of Love?</p>
+  <p>A sampled quiz question: What&#39;s the purpose of human life?</p>
 
 <ol>
-<li><em>Paris, mon Dieu!</em></li>
-<li>London, you fool!</li>
-<li>Berlin, ohnehin!</li>
-<li>My place, cherry!</li>
+<li><em>Paying taxes</em></li>
+<li>Love</li>
+<li>See Napels and die</li>
+<li>God only knows!</li>
 </ol>
 
   <button class="quiz-submit btn btn-primary">Submit</button>
@@ -72,11 +88,11 @@
   <button class="quiz-clear btn btn-danger">Clear</button>
   
   <div class="quiz-hint">
-  <p>Another croissant, ma cherie?</p>
+  <p>This hint costs you 100$ incl. VAT</p>
 
 </div>
 <div class="quiz-explanation">
-  <p>Does Love need a place?</p>
+  <p>Ask your local tax authority</p>
 
 </div>
 </div>
@@ -87,24 +103,64 @@
   <ul>
 <li>But can we randomize the order of the answers?</li>
 <li>Not in Slidify</li>
+<li>Enter Shiny!</li>
 </ul>
+
+<pre><code class="r"> #This code goes into the server side of Shiny (app*.R)/ UI goes into Slide
+
+library(plyr)
+# Build data frame of Q&amp;A
+qtn &lt;&lt;- c(&quot;What is the capital of Love?&quot;,
+          &quot;In what country did Shakespeare live and work?&quot;,
+          &quot;What&#39;s the purpose of human life?&quot;)
+
+answ &lt;&lt;- c(&quot;Paris mon Dieu!&quot;, &quot;Great Britain&quot;, &quot;Paying taxes&quot;)
+opt1 &lt;&lt;- c(&quot;London you fool!&quot;, &quot;USA&quot;, &quot;Love&quot;)
+opt2 &lt;&lt;- c(&quot;Berlin ohnehin!&quot;, &quot;Italy&quot;, &quot;See Napels and die&quot;)
+opt3 &lt;&lt;- c(&quot;My place cherry!&quot;, &quot;Oosterbeek (where&#39;s that!?)&quot;, &quot;God only knows!&quot;)
+answers &lt;&lt;- data.frame(answ, opt1, opt2, opt3)  
+
+# Sample row and column coordinates
+p &lt;- sample(1:3,size = 1)
+q &lt;- sample(1:4, size = 4)
+
+# Build radiobuttons for UI using sampled Q&amp;A
+output$ui &lt;- renderUI({
+  radioButtons(&#39;answ&#39;, paste(&#39;Question -&#39;,qtn[p]),
+               c(paste(answers[p,q[1]]),
+                 paste(answers[p,q[2]]),
+                 paste(answers[p,q[3]]),
+                 paste(answers[p,q[4]])), selected = 0)
+})
+
+# Function to check answer and returning result
+chkQuestion &lt;- function(answer, correct) {
+  message &lt;- if(answer == correct) &#39;Correct&#39; else &#39;False&#39;
+  return(message)}
+
+# Push result to server output
+rltInput1 &lt;- reactive({try_default(chkQuestion(input$answ, answers$answ[p]),
+                                           default = &#39;Choose&#39;, quiet = TRUE)
+                      })
+output$result &lt;- renderText({paste(&#39;Result:&#39;,rltInput1())})
+</code></pre>
 
 </article>
 
 <article class="" id="slide-5" style="background:;">
-  <h3>5. Enter Shiny!</h3>
-  <p>Shiny has the interactivity and the quiz elements (like radio buttons)</p>
+  <h3>5. Not entirely Shiny,</h3>
+  <p>But so you get an idea. Publishing Slidies with built in Shinies is maybe possible, but I couldn&#39;t figure it out yet. Runs smoothly when used locally, though.</p>
 
-<p>With some simple R code you can sample from a set of questions and return the answers in random order.</p>
-
-<p>A scrambled quiz question: What is the capital of Love?</p>
+<p>A scrambled quiz question: What&#39;s the purpose of human life?</p>
 
 <ol>
-<li>Berlin, ohnehin!</li>
-<li>Paris mon Dieu!</li>
-<li>London, you fool!</li>
-<li>My place, cherry!</li>
+<li>Paying taxes</li>
+<li>See Napels and die</li>
+<li>God only knows!</li>
+<li>Love</li>
 </ol>
+
+<p>And this is how it looks as a standalone <a href="https://tenhove.shinyapps.io/Quizii">app</a></p>
 
 </article>
 
