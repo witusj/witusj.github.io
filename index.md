@@ -14,7 +14,7 @@ logo        : Logo_short.png
 
 ## 1. A quiz in Slidify
 
-_(Sorry but the quiz widget only seems to work in io2012 )_
+_(Sorry but the quiz widget only seems to work in [io2012](http://witusj.github.io/quizii))_
 
 A simple quiz question: $sin(2pi)=$
 
