@@ -1,8 +1,8 @@
 ---
-title       : 
+title       : Example of Shiny in Slidify
 subtitle    : 
-author      : 
-job         : 
+author      : Witek ten Hove
+job         : Instructor HAN University of AS / The Netherlands
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -10,14 +10,14 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 ---
 
-## Read-And-Delete
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
 
---- .class #id 
+## Slide 1 Shiny Example
 
+<iframe width='100%' height='800' src='https://tenhove.shinyapps.io/Quizii/' frameborder='0'></iframe>
+
+
+---
 ## Slide 2
 
 
