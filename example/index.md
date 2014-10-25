@@ -682,7 +682,7 @@ mode        : selfcontained # {standalone, draft}
 
 ---
 
-## 2. NPV
+## 2. Netto Contante Waarde
 
 
 <iframe width='100%' height='600' src='https://tenhove.shinyapps.io/NPVEx/' frameborder='0'></iframe>
