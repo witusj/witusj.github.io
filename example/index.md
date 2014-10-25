@@ -682,7 +682,15 @@ mode        : selfcontained # {standalone, draft}
 
 ---
 
-## 2. Netto Contante Waarde
+## 2. Contante waarde cumulatief
+
+
+<iframe width='100%' height='600' src='https://tenhove.shinyapps.io/PVCum/' frameborder='0'></iframe>
+
+
+---
+
+## 3. Netto Contante Waarde
 
 
 <iframe width='100%' height='600' src='https://tenhove.shinyapps.io/NPVEx/' frameborder='0'></iframe>
