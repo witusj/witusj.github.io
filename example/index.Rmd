@@ -10,7 +10,7 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 ---
 
-## 1. Annuiteit
+## 1. Contante waarde gelijke reeks
 
 ```{r nvd3plot, results = 'asis', comment = NA, message = F, echo = F, cache=FALSE}
 require(rCharts)
@@ -27,7 +27,7 @@ h1$chart(type='line')
 h1$series(data = PVs$PV, marker= list(symbol = 'circle'))
 h1$series(data = PVs$PV, marker= list(symbol = 'circle'))
 # h1 <- hPlot(x = 'Time', y = 'PV', data = PVs, type = 'line')
-h1$title(text = paste0('Verloop Contante Waarde in Tijd met C = ', CFs, ' en R = ', DiscR*100, '%'))
+h1$title(text = paste0('Verloop contante waarde in tijd met C = ', CFs, ' en R = ', DiscR*100, '%'))
 h1$tooltip(formatter = "#! function(){return('<b>t: </b>' + this.x + '<br/>' + '<b>PV: </b>' + this.y);} !#")
 h1$colors(c('rgb(255,85,0)', 'rgb(255,85,0)'))
 h1$legend(enabled = FALSE)
@@ -47,11 +47,18 @@ h1$show('inline')
 
 ---
 
-## 3. Netto Contante Waarde
+## 3. Contante waarde ongelijke reeks
+
+
+<iframe width='100%' height='600' src='https://tenhove.shinyapps.io/CFPV/' frameborder='0'></iframe>
+
+
+---
+
+## 4. Netto contante waarde (NCW)
 
 
 <iframe width='100%' height='600' src='https://tenhove.shinyapps.io/NPVEx/' frameborder='0'></iframe>
-
 
 
 

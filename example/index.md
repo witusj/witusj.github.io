@@ -10,7 +10,7 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 ---
 
-## 1. Annuiteit
+## 1. Contante waarde gelijke reeks
 
 
 <div id = 'chart1' class = 'rChart highcharts'></div>
@@ -29,7 +29,7 @@ mode        : selfcontained # {standalone, draft}
  "enabled": false 
 },
 "title": {
- "text": "Verloop Contante Waarde in Tijd met C = 1000 en R = 5%" 
+ "text": "Verloop contante waarde in tijd met C = 1000 en R = 5%" 
 },
 "yAxis": [
  {
@@ -690,11 +690,18 @@ mode        : selfcontained # {standalone, draft}
 
 ---
 
-## 3. Netto Contante Waarde
+## 3. Contante waarde ongelijke reeks
+
+
+<iframe width='100%' height='600' src='https://tenhove.shinyapps.io/CFPV/' frameborder='0'></iframe>
+
+
+---
+
+## 4. Netto contante waarde (NCW)
 
 
 <iframe width='100%' height='600' src='https://tenhove.shinyapps.io/NPVEx/' frameborder='0'></iframe>
-
 
 
 
