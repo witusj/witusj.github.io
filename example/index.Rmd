@@ -3,7 +3,7 @@ title       : Finance Advanced
 subtitle    : College 1
 author      : Witek ten Hove
 job         : Instructor HAN University of Applied Sciences
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+framework   : html5slides        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
