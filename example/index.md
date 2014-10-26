@@ -704,4 +704,10 @@ mode        : selfcontained # {standalone, draft}
 <iframe width='100%' height='600' src='https://tenhove.shinyapps.io/NPVEx/' frameborder='0'></iframe>
 
 
+---
+
+## 5. Aflossingsschema annuiteit
+
+
+<iframe width='100%' height='600' src='https://tenhove.shinyapps.io/AnnTbl/' frameborder='0'></iframe>
 
