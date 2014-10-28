@@ -1,12 +1,12 @@
 ---
 title       : Finance Advanced
-subtitle    : College 1
+subtitle    : college 1
 author      : Witek ten Hove
-job         : Instructor HAN University of Applied Sciences
+job         : Instructor HAN University of AS
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
+widgets     : [mathjax]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 ---
 
@@ -41,30 +41,44 @@ h1$show('inline')
 
 ## 2. Contante waarde cumulatief
 
+$CW = \displaystyle\sum\limits_{i=1}^{300}\dfrac{C}{(1 + R)^{i}}$   
 
-<iframe width='100%' height='600' src='https://tenhove.shinyapps.io/PVCum/' frameborder='0'></iframe>
+<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/AnnPV/' frameborder='0'></iframe>
+
 
 
 ---
 
 ## 3. Contante waarde ongelijke reeks
 
+$\displaystyle\sum\limits_{i=1}^{T}\dfrac{C_i}{(1 + R)^{i}}$   
 
-<iframe width='100%' height='600' src='https://tenhove.shinyapps.io/CFPV/' frameborder='0'></iframe>
+<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/CashPV/' frameborder='0'></iframe>
 
 
 ---
 
 ## 4. Netto contante waarde (NCW)
+$NCW = -I + \displaystyle\sum\limits_{i=1}^{T}\dfrac{C_i}{(1 + R)^{i}}$
 
-
-<iframe width='100%' height='600' src='https://tenhove.shinyapps.io/NPVEx/' frameborder='0'></iframe>
+<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/NPV/' frameborder='0'></iframe>
 
 
 ---
 
 ## 5. Aflossingsschema annuiteit
+$CW = Ann * \dfrac{1-\dfrac{1}{(1 + R)^{t}}}{R}$
+
+<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/AnnTbl/' frameborder='0'></iframe>
 
 
-<iframe width='100%' height='600' src='https://tenhove.shinyapps.io/AnnTbl/' frameborder='0'></iframe>
+---
+
+## Ter afsluiting
+   
+    
+### ~ If only God would give me some clear sign!
+### Like making a large deposit in my name at a Swiss Bank ~
+
+- Woody Allen
 
