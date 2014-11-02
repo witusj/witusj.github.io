@@ -11,21 +11,23 @@ mode        : selfcontained # {standalone, draft}
 ---
 
 ## 1. Toekomstige waarde
-$TW = HW * (1 + R)^{t}$   
+$TW = CW * (1 + R)^{t}$   
 
 <iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/FV/' frameborder='0'></iframe>
 
 ---
 
 ## 1.2 Toekomstige waarde
-1. Neem een vermogen (HW) = 10.000 EUR en een rentevoet (R) = 6%. Na hoeveel jaar is het vermogen ongeveer verdubbeld?
-2. Hetzelfde met HW = 10.000 EUR en een rentevoet R = 9%.
+1. Neem een vermogen (CW) = 10.000 EUR en een rentevoet (R) = 6%. Na hoeveel jaar is het vermogen ongeveer verdubbeld?
+2. Hetzelfde met CW = 10.000 EUR en R = 9%.
 3. Welk patroon kun je ontdekken?
 
 <iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/FV/' frameborder='0'></iframe>
 
 ---
-## 2. Contante waarde gelijke reeks
+## 2. Contante waarde
+
+$CW = \dfrac{TW}{(1 + R)^{t}}$
 
 
 <div id = 'chart1' class = 'rChart highcharts'></div>
@@ -697,17 +699,25 @@ $TW = HW * (1 + R)^{t}$
 
 ---
 
-## 3. Contante waarde cumulatief
+## 3. Contante waarde gelijke reeks
 
-$CW = \displaystyle\sum\limits_{i=1}^{300}\dfrac{C}{(1 + R)^{i}}$   
+$CW = \displaystyle\sum\limits_{i=1}^{300}\dfrac{C}{(1 + R)^{i}}$
+
+1. Verander de waarde van R een aantal maal. Welk patroon kun je herkennen?
 
 <iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/AnnPV/' frameborder='0'></iframe>
 
 
+---
+
+## 4. Aflossingsschema annuiteit
+$CW = Ann * \dfrac{1-\dfrac{1}{(1 + R)^{t}}}{R}$
+
+<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/AnnTbl/' frameborder='0'></iframe>
 
 ---
 
-## 4. Contante waarde ongelijke reeks
+## 5. Contante waarde ongelijke reeks
 
 $\displaystyle\sum\limits_{i=1}^{T}\dfrac{C_i}{(1 + R)^{i}}$   
 
@@ -716,7 +726,7 @@ $\displaystyle\sum\limits_{i=1}^{T}\dfrac{C_i}{(1 + R)^{i}}$
 
 ---
 
-## 5. Netto contante waarde (NCW)
+## 6. Netto contante waarde (NCW)
 $NCW = -I + \displaystyle\sum\limits_{i=1}^{T}\dfrac{C_i}{(1 + R)^{i}}$
 
 <iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/NPV/' frameborder='0'></iframe>
@@ -724,13 +734,16 @@ $NCW = -I + \displaystyle\sum\limits_{i=1}^{T}\dfrac{C_i}{(1 + R)^{i}}$
 
 ---
 
-## 6. Aflossingsschema annuiteit
-$CW = Ann * \dfrac{1-\dfrac{1}{(1 + R)^{t}}}{R}$
+## 6.1 Netto contante waarde (NCW)
 
-<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/AnnTbl/' frameborder='0'></iframe>
+1. Neem I = 10000, C = 1500 en een looptijd van 10 periodes. Bij welke disconteringsvoet is de NCW ongeveer nul?
+2. Bepaal m.b.v. het schema op slide 5 de IRR van de onder 1 genoemde investering.
+
+<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/NPV/' frameborder='0'></iframe>
 
 
 ---
+
 
 ## Ter afsluiting
    

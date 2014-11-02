@@ -50,7 +50,7 @@
     <h2>1. Toekomstige waarde</h2>
   </hgroup>
   <article data-timings="">
-    <p>\(TW = HW * (1 + R)^{t}\)   </p>
+    <p>\(TW = CW * (1 + R)^{t}\)   </p>
 
 <iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/FV/' frameborder='0'></iframe>
 
@@ -64,8 +64,8 @@
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Neem een vermogen (HW) = 10.000 EUR en een rentevoet (R) = 6%. Na hoeveel jaar is het vermogen ongeveer verdubbeld?</li>
-<li>Hetzelfde met HW = 10.000 EUR en een rentevoet R = 9%.</li>
+<li>Neem een vermogen (CW) = 10.000 EUR en een rentevoet (R) = 6%. Na hoeveel jaar is het vermogen ongeveer verdubbeld?</li>
+<li>Hetzelfde met CW = 10.000 EUR en R = 9%.</li>
 <li>Welk patroon kun je ontdekken?</li>
 </ol>
 
@@ -77,10 +77,12 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>2. Contante waarde gelijke reeks</h2>
+    <h2>2. Contante waarde</h2>
   </hgroup>
   <article data-timings="">
-    <div id = 'chart1' class = 'rChart highcharts'></div>
+    <p>\(CW = \dfrac{TW}{(1 + R)^{t}}\)</p>
+
+<div id = 'chart1' class = 'rChart highcharts'></div>
 
 <script type='text/javascript'>
     (function($){
@@ -754,10 +756,14 @@
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>3. Contante waarde cumulatief</h2>
+    <h2>3. Contante waarde gelijke reeks</h2>
   </hgroup>
   <article data-timings="">
-    <p>\(CW = \displaystyle\sum\limits_{i=1}^{300}\dfrac{C}{(1 + R)^{i}}\)   </p>
+    <p>\(CW = \displaystyle\sum\limits_{i=1}^{300}\dfrac{C}{(1 + R)^{i}}\)</p>
+
+<ol>
+<li>Verander de waarde van R een aantal maal. Welk patroon kun je herkennen?</li>
+</ol>
 
 <iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/AnnPV/' frameborder='0'></iframe>
 
@@ -767,33 +773,7 @@
 
 <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2>4. Contante waarde ongelijke reeks</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>\(\displaystyle\sum\limits_{i=1}^{T}\dfrac{C_i}{(1 + R)^{i}}\)   </p>
-
-<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/CashPV/' frameborder='0'></iframe>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-6" style="background:;">
-  <hgroup>
-    <h2>5. Netto contante waarde (NCW)</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>\(NCW = -I + \displaystyle\sum\limits_{i=1}^{T}\dfrac{C_i}{(1 + R)^{i}}\)</p>
-
-<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/NPV/' frameborder='0'></iframe>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-7" style="background:;">
-  <hgroup>
-    <h2>6. Aflossingsschema annuiteit</h2>
+    <h2>4. Aflossingsschema annuiteit</h2>
   </hgroup>
   <article data-timings="">
     <p>\(CW = Ann * \dfrac{1-\dfrac{1}{(1 + R)^{t}}}{R}\)</p>
@@ -804,7 +784,49 @@
   <!-- Presenter Notes -->
 </slide>
 
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>5. Contante waarde ongelijke reeks</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>\(\displaystyle\sum\limits_{i=1}^{T}\dfrac{C_i}{(1 + R)^{i}}\)   </p>
+
+<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/CashPV/' frameborder='0'></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>6. Netto contante waarde (NCW)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>\(NCW = -I + \displaystyle\sum\limits_{i=1}^{T}\dfrac{C_i}{(1 + R)^{i}}\)</p>
+
+<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/NPV/' frameborder='0'></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
 <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>6.1 Netto contante waarde (NCW)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Neem I = 10000, C = 1500 en een looptijd van 10 periodes. Bij welke disconteringsvoet is de NCW ongeveer nul?</li>
+<li>Bepaal m.b.v. het schema op slide 5 de IRR van de onder 1 genoemde investering.</li>
+</ol>
+
+<iframe width='100%' height='600' src='http://ec2-54-76-89-164.eu-west-1.compute.amazonaws.com:3838/FinAdv/Coll1/NPV/' frameborder='0'></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:;">
   <hgroup>
     <h2>Ter afsluiting</h2>
   </hgroup>
@@ -839,38 +861,44 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='2. Contante waarde gelijke reeks'>
+        data-slide=3 title='2. Contante waarde'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='3. Contante waarde cumulatief'>
+        data-slide=4 title='3. Contante waarde gelijke reeks'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='4. Contante waarde ongelijke reeks'>
+        data-slide=5 title='4. Aflossingsschema annuiteit'>
          5
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=6 title='5. Netto contante waarde (NCW)'>
+        data-slide=6 title='5. Contante waarde ongelijke reeks'>
          6
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=7 title='6. Aflossingsschema annuiteit'>
+        data-slide=7 title='6. Netto contante waarde (NCW)'>
          7
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Ter afsluiting'>
+        data-slide=8 title='6.1 Netto contante waarde (NCW)'>
          8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Ter afsluiting'>
+         9
       </a>
     </li>
   </ul>
