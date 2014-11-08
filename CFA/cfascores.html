@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0065)http://127.0.0.1:31325/custom/googleVis/MergedID1b4c3c0f1688.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MergedID1b4c3c0f1688</title>
+
+<style type="text/css">
+body {
+  color: #444444;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 75%;
+  }
+  a {
+  color: #4D87C7;
+  text-decoration: none;
+}
+</style>
+<style type="text/css"></style><script type="text/javascript" src="./cfascores_files/saved_resource"></script><link type="text/css" href="./cfascores_files/ui+en.css" rel="stylesheet"><script type="text/javascript" src="./cfascores_files/format+en,default+en,ui+en,corechart+en.I.js"></script><link href="./cfascores_files/tooltip.css" rel="stylesheet" type="text/css"></head>
+<body>
+ <!-- ColumnChart generated in R 3.1.0 by googleVis 0.5.6 package -->
+<!-- Fri Nov 07 20:46:22 2014 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataChart1 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "A.C02",
+0,
+1 
+],
+[
+ "N.C01",
+1,
+0 
+],
+[
+ "N.C02",
+10,
+8 
+],
+[
+ "N.C03",
+0,
+1 
+],
+[
+ "N.Overige",
+1,
+0 
+] 
+];
+data.addColumn('string','Groep');
+data.addColumn('number','Vold');
+data.addColumn('number','Onvold');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsData 
+function gvisDataChart2 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "A.C02",
+1,
+0 
+],
+[
+ "N.C01",
+1,
+0 
+],
+[
+ "N.C02",
+12,
+6 
+],
+[
+ "N.C03",
+0,
+1 
+],
+[
+ "N.Overige",
+1,
+0 
+] 
+];
+data.addColumn('string','Groep');
+data.addColumn('number','Vold');
+data.addColumn('number','Onvold');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsData 
+function gvisDataChart3 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "HAVO",
+10,
+6 
+],
+[
+ "MBO",
+0,
+1 
+],
+[
+ "VWO",
+2,
+2 
+] 
+];
+data.addColumn('string','Opleiding');
+data.addColumn('number','Vold');
+data.addColumn('number','Onvold');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsData 
+function gvisDataChart4 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "HAVO",
+12,
+4 
+],
+[
+ "MBO",
+0,
+1 
+],
+[
+ "VWO",
+3,
+1 
+] 
+];
+data.addColumn('string','Opleiding');
+data.addColumn('number','Vold');
+data.addColumn('number','Onvold');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartChart1() {
+var data = gvisDataChart1();
+var options = {};
+options["allowHtml"] = true;
+options["isStacked"] = true;
+options["width"] =    600;
+options["height"] =    400;
+options["title"] = "Aantal voldoende vs onvoldoende per groep (zonder bonus)";
+options["hAxis"] = {title: 'Groepen'};
+options["vAxis"] = {title: 'Aantal'};
+
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('Chart1')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDrawChart
+function drawChartChart2() {
+var data = gvisDataChart2();
+var options = {};
+options["allowHtml"] = true;
+options["isStacked"] = true;
+options["width"] =    600;
+options["height"] =    400;
+options["title"] = "Aantal voldoende vs onvoldoende per groep (met bonus)";
+options["hAxis"] = {title: 'Groepen'};
+options["vAxis"] = {title: 'Aantal'};
+
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('Chart2')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDrawChart
+function drawChartChart3() {
+var data = gvisDataChart3();
+var options = {};
+options["allowHtml"] = true;
+options["isStacked"] = true;
+options["width"] =    600;
+options["height"] =    400;
+options["title"] = "Aantal voldoende vs onvoldoende per opleiding (zonder bonus)";
+options["hAxis"] = {title: 'Opleiding'};
+options["vAxis"] = {title: 'Aantal'};
+
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('Chart3')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDrawChart
+function drawChartChart4() {
+var data = gvisDataChart4();
+var options = {};
+options["allowHtml"] = true;
+options["isStacked"] = true;
+options["width"] =    600;
+options["height"] =    400;
+options["title"] = "Aantal voldoende vs onvoldoende per opleiding (met bonus)";
+options["hAxis"] = {title: 'Opleiding'};
+options["vAxis"] = {title: 'Aantal'};
+
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('Chart4')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartChart1);
+})();
+function displayChartChart1() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartChart2);
+})();
+function displayChartChart2() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartChart3);
+})();
+function displayChartChart3() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartChart4);
+})();
+function displayChartChart4() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="./cfascores_files/jsapi"></script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="./cfascores_files/jsapi(1)"></script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="./cfascores_files/jsapi(2)"></script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="./cfascores_files/jsapi(3)"></script>
+ 
+<table border="0">
+<tbody><tr>
+<td>
+
+<table border="0">
+<tbody><tr>
+<td>
+
+<!-- divChart -->
+  
+<div id="Chart1" style="position: relative;"><div dir="ltr" style="position: relative; width: 600px; height: 400px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="600" height="400" aria-label="A chart." aria-hidden="true" style="overflow: hidden;"><defs id="defs"><clippath id="_ABSTRACT_RENDERER_ID_0"><rect x="115" y="77" width="371" height="247"></rect></clippath></defs><rect x="0" y="0" width="600" height="400" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="115" y="54.05" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Aantal voldoende vs onvoldoende per groep (zonder bonus)</text></g><g><rect x="499" y="77" width="88" height="34" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="499" y="77" width="88" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="517" y="88.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">Onvold</text></g><rect x="499" y="77" width="13" height="13" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="499" y="98" width="88" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="517" y="109.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">Vold</text></g><rect x="499" y="98" width="13" height="13" stroke="none" stroke-width="0" fill="#3366cc"></rect></g></g><g><rect x="115" y="77" width="371" height="247" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_0)"><g><rect x="115" y="323" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="262" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="200" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="139" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="77" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="130" y="323" width="45" height="0" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="204" y="312" width="45" height="11" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="278" y="201" width="45" height="122" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="352" y="323" width="45" height="0" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="426" y="312" width="45" height="11" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="130" y="312" width="45" height="11" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="204" y="323" width="45" height="0" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="278" y="103" width="45" height="97" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="352" y="312" width="45" height="11" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="426" y="323" width="45" height="0" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="115" y="323" width="371" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="152.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">A.C02</text></g><g><text text-anchor="middle" x="226.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">N.C01</text></g><g><text text-anchor="middle" x="300.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">N.C02</text></g><g><text text-anchor="middle" x="374.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">N.C03</text></g><g><text text-anchor="middle" x="448.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">N.Overige</text></g><g><text text-anchor="end" x="102" y="328.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="102" y="266.55" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">5</text></g><g><text text-anchor="end" x="102" y="205.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">10</text></g><g><text text-anchor="end" x="102" y="143.55" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">15</text></g><g><text text-anchor="end" x="102" y="82.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">20</text></g></g></g><g><g><text text-anchor="middle" x="300.5" y="377.05" font-family="Arial" font-size="13" font-style="italic" stroke="none" stroke-width="0" fill="#222222">Groepen</text></g><g><text text-anchor="middle" x="49.05" y="200.5" font-family="Arial" font-size="13" font-style="italic" transform="rotate(-90 49.05 200.5)" stroke="none" stroke-width="0" fill="#222222">Aantal</text></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><tbody><tr><th>Groep</th><th>Vold</th><th>Onvold</th></tr>
+<tr><td>A.C02</td><td>0</td><td>1</td></tr>
+<tr><td>N.C01</td><td>1</td><td>0</td></tr>
+<tr><td>N.C02</td><td>10</td><td>8</td></tr>
+<tr><td>N.C03</td><td>0</td><td>1</td></tr>
+<tr><td>N.Overige</td><td>1</td><td>0</td></tr>
+</tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 410px; left: 610px; white-space: nowrap; font-family: Arial; font-size: 13px; font-weight: bold;">A.C02</div><div></div></div>
+
+</td>
+<td>
+
+<!-- divChart -->
+  
+<div id="Chart2" style="position: relative;"><div dir="ltr" style="position: relative; width: 600px; height: 400px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="600" height="400" aria-label="A chart." aria-hidden="true" style="overflow: hidden;"><defs id="defs"><clippath id="_ABSTRACT_RENDERER_ID_1"><rect x="115" y="77" width="371" height="247"></rect></clippath></defs><rect x="0" y="0" width="600" height="400" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="115" y="54.05" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Aantal voldoende vs onvoldoende per groep (met bonus)</text></g><g><rect x="499" y="77" width="88" height="34" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="499" y="77" width="88" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="517" y="88.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">Onvold</text></g><rect x="499" y="77" width="13" height="13" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="499" y="98" width="88" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="517" y="109.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">Vold</text></g><rect x="499" y="98" width="13" height="13" stroke="none" stroke-width="0" fill="#3366cc"></rect></g></g><g><rect x="115" y="77" width="371" height="247" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_1)"><g><rect x="115" y="323" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="262" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="200" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="139" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="77" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="130" y="312" width="45" height="11" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="204" y="312" width="45" height="11" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="278" y="176" width="45" height="147" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="352" y="323" width="45" height="0" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="426" y="312" width="45" height="11" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="130" y="323" width="45" height="0" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="204" y="323" width="45" height="0" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="278" y="103" width="45" height="72" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="352" y="312" width="45" height="11" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="426" y="323" width="45" height="0" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="115" y="323" width="371" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="152.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">A.C02</text></g><g><text text-anchor="middle" x="226.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">N.C01</text></g><g><text text-anchor="middle" x="300.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">N.C02</text></g><g><text text-anchor="middle" x="374.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">N.C03</text></g><g><text text-anchor="middle" x="448.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">N.Overige</text></g><g><text text-anchor="end" x="102" y="328.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="102" y="266.55" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">5</text></g><g><text text-anchor="end" x="102" y="205.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">10</text></g><g><text text-anchor="end" x="102" y="143.55" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">15</text></g><g><text text-anchor="end" x="102" y="82.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">20</text></g></g></g><g><g><text text-anchor="middle" x="300.5" y="377.05" font-family="Arial" font-size="13" font-style="italic" stroke="none" stroke-width="0" fill="#222222">Groepen</text></g><g><text text-anchor="middle" x="49.05" y="200.5" font-family="Arial" font-size="13" font-style="italic" transform="rotate(-90 49.05 200.5)" stroke="none" stroke-width="0" fill="#222222">Aantal</text></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><tbody><tr><th>Groep</th><th>Vold</th><th>Onvold</th></tr>
+<tr><td>A.C02</td><td>1</td><td>0</td></tr>
+<tr><td>N.C01</td><td>1</td><td>0</td></tr>
+<tr><td>N.C02</td><td>12</td><td>6</td></tr>
+<tr><td>N.C03</td><td>0</td><td>1</td></tr>
+<tr><td>N.Overige</td><td>1</td><td>0</td></tr>
+</tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 410px; left: 610px; white-space: nowrap; font-family: Arial; font-size: 13px; font-weight: bold;">A.C02</div><div></div></div>
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+</tr>
+<tr>
+<td>
+
+<table border="0">
+<tbody><tr>
+<td>
+
+<!-- divChart -->
+  
+<div id="Chart3" style="position: relative;"><div dir="ltr" style="position: relative; width: 600px; height: 400px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="600" height="400" aria-label="A chart." aria-hidden="true" style="overflow: hidden;"><defs id="defs"><clippath id="_ABSTRACT_RENDERER_ID_2"><rect x="115" y="77" width="371" height="247"></rect></clippath></defs><rect x="0" y="0" width="600" height="400" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="115" y="37.05" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Aantal voldoende vs onvoldoende per opleiding (zonder</text><text text-anchor="start" x="115" y="54.05" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">bonus)</text></g><g><rect x="499" y="77" width="88" height="34" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="499" y="77" width="88" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="517" y="88.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">Onvold</text></g><rect x="499" y="77" width="13" height="13" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="499" y="98" width="88" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="517" y="109.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">Vold</text></g><rect x="499" y="98" width="13" height="13" stroke="none" stroke-width="0" fill="#3366cc"></rect></g></g><g><rect x="115" y="77" width="371" height="247" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_2)"><g><rect x="115" y="323" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="262" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="200" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="139" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="77" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="139" y="201" width="76" height="122" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="262" y="323" width="76" height="0" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="385" y="299" width="76" height="24" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="139" y="127" width="76" height="73" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="262" y="312" width="76" height="11" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="385" y="275" width="76" height="23" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="115" y="323" width="371" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="177.16666666666666" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">HAVO</text></g><g><text text-anchor="middle" x="300.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">MBO</text></g><g><text text-anchor="middle" x="423.8333333333333" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">VWO</text></g><g><text text-anchor="end" x="102" y="328.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="102" y="266.55" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">5</text></g><g><text text-anchor="end" x="102" y="205.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">10</text></g><g><text text-anchor="end" x="102" y="143.55" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">15</text></g><g><text text-anchor="end" x="102" y="82.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">20</text></g></g></g><g><g><text text-anchor="middle" x="300.5" y="377.05" font-family="Arial" font-size="13" font-style="italic" stroke="none" stroke-width="0" fill="#222222">Opleiding</text></g><g><text text-anchor="middle" x="49.05" y="200.5" font-family="Arial" font-size="13" font-style="italic" transform="rotate(-90 49.05 200.5)" stroke="none" stroke-width="0" fill="#222222">Aantal</text></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><tbody><tr><th>Opleiding</th><th>Vold</th><th>Onvold</th></tr>
+<tr><td>HAVO</td><td>10</td><td>6</td></tr>
+<tr><td>MBO</td><td>0</td><td>1</td></tr>
+<tr><td>VWO</td><td>2</td><td>2</td></tr>
+</tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 410px; left: 610px; white-space: nowrap; font-family: Arial; font-size: 13px; font-weight: bold;">2</div><div></div></div>
+
+</td>
+<td>
+
+<!-- divChart -->
+  
+<div id="Chart4" style="position: relative;"><div dir="ltr" style="position: relative; width: 600px; height: 400px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="600" height="400" aria-label="A chart." aria-hidden="true" style="overflow: hidden;"><defs id="defs"><clippath id="_ABSTRACT_RENDERER_ID_3"><rect x="115" y="77" width="371" height="247"></rect></clippath></defs><rect x="0" y="0" width="600" height="400" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><text text-anchor="start" x="115" y="37.05" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Aantal voldoende vs onvoldoende per opleiding (met</text><text text-anchor="start" x="115" y="54.05" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">bonus)</text></g><g><rect x="499" y="77" width="88" height="34" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="499" y="77" width="88" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="517" y="88.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">Onvold</text></g><rect x="499" y="77" width="13" height="13" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="499" y="98" width="88" height="13" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="517" y="109.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">Vold</text></g><rect x="499" y="98" width="13" height="13" stroke="none" stroke-width="0" fill="#3366cc"></rect></g></g><g><rect x="115" y="77" width="371" height="247" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(#_ABSTRACT_RENDERER_ID_3)"><g><rect x="115" y="323" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="262" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="200" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="139" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="115" y="77" width="371" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="139" y="176" width="76" height="147" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="262" y="323" width="76" height="0" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="385" y="287" width="76" height="36" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="139" y="127" width="76" height="48" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="262" y="312" width="76" height="11" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="385" y="275" width="76" height="11" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="115" y="323" width="371" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="177.16666666666666" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">HAVO</text></g><g><text text-anchor="middle" x="300.5" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">MBO</text></g><g><text text-anchor="middle" x="423.8333333333333" y="343.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#222222">VWO</text></g><g><text text-anchor="end" x="102" y="328.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="102" y="266.55" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">5</text></g><g><text text-anchor="end" x="102" y="205.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">10</text></g><g><text text-anchor="end" x="102" y="143.55" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">15</text></g><g><text text-anchor="end" x="102" y="82.05" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#444444">20</text></g></g></g><g><g><text text-anchor="middle" x="300.5" y="377.05" font-family="Arial" font-size="13" font-style="italic" stroke="none" stroke-width="0" fill="#222222">Opleiding</text></g><g><text text-anchor="middle" x="49.05" y="200.5" font-family="Arial" font-size="13" font-style="italic" transform="rotate(-90 49.05 200.5)" stroke="none" stroke-width="0" fill="#222222">Aantal</text></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><tbody><tr><th>Opleiding</th><th>Vold</th><th>Onvold</th></tr>
+<tr><td>HAVO</td><td>12</td><td>4</td></tr>
+<tr><td>MBO</td><td>0</td><td>1</td></tr>
+<tr><td>VWO</td><td>3</td><td>1</td></tr>
+</tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 410px; left: 610px; white-space: nowrap; font-family: Arial; font-size: 13px; font-weight: bold;">3</div><div></div></div>
+
+</td>
+</tr>
+</tbody></table>
+
+</td>
+</tr>
+</tbody></table>
+ <div><span>Data: various • Chart ID: <a href="http://127.0.0.1:31325/custom/googleVis/Chart_MergedID1b4c3c0f1688.html">MergedID1b4c3c0f1688</a> • <a href="https://github.com/mages/googleVis">googleVis-0.5.6</a></span><br> 
+<!-- htmlFooter -->
+<span> 
+  R version 3.1.0 (2014-04-10) 
+  • <a href="https://developers.google.com/terms/">Google Terms of Use</a> • Data Policy: See individual charts
+</span></div>
+
+
+</body></html>
