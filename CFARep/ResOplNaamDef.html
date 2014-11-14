@@ -1,0 +1,73 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='C:/Users/NB/Documents/R/win-library/3.1/rCharts/libraries/polycharts/js/polychart2.standalone.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 900px;
+      height: 500px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chart27c35f03c38' class = 'rChart polycharts'></div>    
+    <script type='text/javascript'>
+    var chartParams = {
+ "dom": "chart27c35f03c38",
+"width":    900,
+"height":    500,
+"layers": [
+ {
+ "x": "Kennistoets",
+"y": "Schriftelijk",
+"data": {
+ "Kennistoets": [    7.5,    3.8,    6.4,      6,    6.3,    8.1,    9.2,    4.8,    2.9,    7.3,    6.6,      5,    6.2,    8.3,    6.9,      5,    5.8,    5.2,    7.7,    7.3,      0 ],
+"Schriftelijk": [    7.4,    7.2,    4.8,      7,    5.8,    9.4,    8.8,    0.4,    6.2,    7.8,    6.6,    5.2,    4.4,      9,    4.4,    5.2,    5.6,    3.4,    7.8,      5,    3.6 ],
+"Opleiding": [ "HAVO", "HAVO", "HAVO", "HAVO", "HAVO", "HAVO", "HAVO", "HAVO", "HAVO", "HAVO", "VWO", "HAVO", "HAVO", "HAVO", "VWO", "MBO", "HAVO", "HAVO", "VWO", "VWO", "HAVO" ],
+"Naam": [ "erik", "Dalga", "Ciske", "Jilan", "Sophie", "rob", "Lisa", "Bart", "Ahmet", "Karen", "Margot", "Jan-Hein", "Mathijs", "Luc", "menno", "Vincent", "Isaak", "Bradley", "Judith", "Matthijs", "Randy" ] 
+},
+"facet": "Opleiding",
+"color": "Opleiding",
+"type": "point",
+"size": {
+ "const":      8 
+},
+"tooltip":  function(item) {return(item.Naam + '\nKennistoets: ' + item.Kennistoets + '/10\nSchriftelijk: ' + item.Schriftelijk + '/10');}  
+} 
+],
+"facet": {
+ "type": "wrap",
+"var": "Opleiding" 
+},
+"guides": {
+ "x": {
+ "min":      0,
+"max":     11 
+},
+"y": {
+ "min":      0,
+"max":     11 
+} 
+},
+"coord": [],
+"legendPosition": "none",
+"title": "Resultaten CFA-BEC - Witek ten Hove",
+"id": "chart27c35f03c38" 
+}
+    _.each(chartParams.layers, function(el){
+        el.data = polyjs.data(el.data)
+    })
+    var graph_chart27c35f03c38 = polyjs.chart(chartParams);
+</script>
+    
+    <script></script>    
+  </body>
+</html>
