@@ -1,0 +1,74 @@
+<!----------------------------->
+<!--Minimal example- HTML UI -->
+<!----------------------------->
+
+<html>
+
+<head>
+  <title>HTML minimal example</title>
+  <script src="shared/jquery.js" type="text/javascript"></script>
+  <script src="shared/shiny.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="shared/shiny.css"/>
+  <style type = "text/css">
+    body { 
+      background-color: #FFFF66;
+  	}
+
+    #navigation {
+      position: absolute;
+      width: 200px;
+    }
+ 
+    #centerDoc {
+      
+      margin-left: 200px;
+      border-left: 1px solid #C6EC8C;
+      padding-left: 20px;
+	}
+  </style>
+
+</head>
+ 
+<body>
+
+    <h1>Module CFA - Scores</h1>
+
+    <div id = "navigation">
+     
+    <p>
+      <label>Locatie</label><br />
+      <input type="checkbox" name="locatie"
+      value="Arnhem" title="Arnhem" checked>Arnhem<br>
+      <input type="checkbox" name="locatie" value="Nijmegen" title="Nijmegen" checked>Nijmegen<br>
+    </p>
+	
+	<p>
+      <label>Groep</label><br />
+      <input type="checkbox" name="groep[]"
+      value="C01" title="C01" checked>C01<br>
+      <input type="checkbox" name="groep[]"
+      value="C02" title="C02" checked>C02<br>
+	  <input type="checkbox" name="groep[]"
+      value="C03" title="C03" checked>C03<br>
+      <input type="checkbox" name="groep[]"
+      value="C04" title="C04" checked>C04<br>
+	  <input type="checkbox" name="groep[]"
+      value="C05" title="C05" checked>C05<br>
+      <input type="checkbox" name="groep[]"
+      value="C06" title="C06" checked>C06<br>
+	  <input type="checkbox" name="groep[]"
+      value="Overige" title="Overige" checked>Overige<br>
+    </p>
+        
+    </div>
+    
+    <div id = "centerDoc">
+      
+      <div id="tableDisplay" class="shiny-html-output" 
+       style="width: 120%; background-color: #FFFFFF; border: 1px solid black;"></div>
+       
+    </div>
+       
+</body>
+
+</html>

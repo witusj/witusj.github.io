@@ -1,0 +1,64 @@
+---
+title: "Eindanalyse CFA-BEC P1 Collegejaar 14/15"
+author: "Witek ten Hove"
+date: "Monday, November 17, 2014"
+output: html_document
+---
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script src='http://ramnathv.github.io/rCharts/libraries/widgets/polycharts/js/polychart2.standalone.js' type='text/javascript'></script>
+```{r echo=FALSE, cache=FALSE, warning=FALSE, message=FALSE}
+source('EindAnal.R')
+```
+
+In totaal hebben `r length(ScoresOverv$ID)` studenten in één of andere vorm deelgenomen aan de module (colleges, tussentoetsen en/of tentamen). Van deze studenten is gedurende de periode data verzameld. Uiteindelijk hebben `r length(na.omit(ScoresOverv$Score.Schr))` personen van deze groep deelgenomen aan het schriftelijk tentamen, waarvan `r length(na.omit(ScoresOverv[ScoresOverv$Score.Schr >= 27.5,15]))` (= `r round(100*length(na.omit(ScoresOverv[ScoresOverv$Score.Schr >= 27.5,15]))/length(na.omit(ScoresOverv$Score.Schr)))`%) een voldoende hebben gescoord voor de vragen die bij het onderdeel BEC hoorden.
+
+Tijdens de module konden bonuspunten worden behaald. Als deze worden meegerekend zijn er `r length(na.omit(ScoresOverv[ScoresOverv$Eindscore >= 27.5,16]))` voldoendes gescoord (= `r round(100*length(na.omit(ScoresOverv[ScoresOverv$Eindscore >= 27.5,16]))/length(na.omit(ScoresOverv$Score.Schr)))`%).
+
+Het kan zijn dat er studenten zijn die wel het schriftelijk tentamen hebben gemaakt, maar die niet zijn meegenomen in het onderzoek. Deze groep heeft niet actief geparticipeerd in het studieprogramma dat werd aangeboden en kon daarom niet worden gemeten.
+
+In onderstaand overzicht zijn de scores per groep weergegeven (beweeg met de cursor over onderdelen van de grafiek voor meer informatie).
+
+```{r echo=FALSE, cache=FALSE, comment=NA, results='asis', tidy=FALSE, warning=FALSE, message=FALSE}
+print(scrLoc, 'chart')
+```
+
+Opvallend is groep C03 in Nijmegen waar slechts 1 persoon een voldoende wist te behalen op een groep van 10. Er is onderzocht wat hiervan de reden zou kunnen zijn. Dit zal later worden besproken. Slepers hebben uitzonderlijk goed gescoord met een slagingspercentage van `r round(100*length(na.omit(ScoresOverv[ScoresOverv$Groep == 'Overige' & ScoresOverv$Eindscore >= 27.5,16]))/length(na.omit(ScoresOverv[ScoresOverv$Groep == 'Overige',16])))`% (na verwerking bonus).
+
+Om studenten aan te sporen regelmatig de leerstof bij te houden is er een beloningssysteem ontwikkeld. De beloning in de vorm van bonuspunten voor het schriftelijk tentamen kon verdiend worden met het voldoende scoren op tussentijdse toetsen en het maken van een proeftoets. Alle tussentijdse toetsen zijn onder gecontroleerde omstandigheden afgenomen. De resultaten van de toetsen zijn hieronder weergegeven (beweeg met de cursor over onderdelen van de grafiek voor meer informatie):
+
+```{r echo=FALSE, cache=FALSE, comment=NA, results='asis', tidy=FALSE, warning=FALSE, message=FALSE}
+print(scrWKs, 'chart')
+```
+Ook in dit overzicht valt groep C03 wederom op. Wat betreft de eerste kennistoets (blauwe balk) lijken ze gelijk op te lopen met de overige groepen. Echter, de scores zijn in dit geval niet geheel vergelijkbaar, omdat door een technische storing bij deze groep de resultaten slechts globaal kon worden bepaald in de vorm van voldoende (10) en onvoldoende (5). De overige resultaten zijn wel direct vergelijkbaar en hier scoort de betreffende groep significant slechter dan de anderen. Uiteindelijk heeft slechts 1 persoon uit de groep bonuspunten weten te bemachtigen.
+
+Algemeen kan uit het overzicht geconcludeerd worden dat studenten zeer beloningsgericht studeren; zodra ze weten dat ze de bonusdrempel wel of niet gehaald hebben, neemt de motivatie om voor te bereiden duidelijk af.
+
+Er is onderzocht in welke mate een gedisciplineerde studiehouding bijdraagt aan een succesvolle afronding van de module. De volgende grafiek geeft een totaal overzicht waarbij onderscheid is gemaakt naar vooropleiding. Op de x-as staat de gemiddeld behaalde score voor de kennistoets, op de y-as de tentamenscore (beweeg met de cursor over onderdelen van de grafiek voor meer informatie).
+
+```{r echo=FALSE, cache=FALSE, comment=NA, results='asis', tidy=FALSE, warning=FALSE, message=FALSE}
+p3$show('inline', include_assets = TRUE, standalone = TRUE)
+```
+
+Algemeen wordt aangenomen dat de vooropleiding van invloed is op de prestatie. Voor deze hypothese blijkt in deze casus geen bewijs; alle opleidingscategorieen lijken evenveel goede als minder goede studenten te kennen. Ook uit statistische tests (logistische regressie) blijkt vooropleiding niet van invloed te zijn op de kans op succes.
+
+Er is een zwak lineair verband tussen de gemiddelde score van de kennistoetsen en het resultaat van het schriftelijk tentamen (zonder bonuspunten). Alle coefficienten van het regressiemodel zijn significant (p < 0,05).
+
+```{r echo=FALSE, cache=FALSE, comment=NA, results='asis', tidy=FALSE, warning=FALSE, message=FALSE}
+p2$show('inline', include_assets = TRUE, standalone = TRUE)
+```
+Als dezelfde gegevens worden gegroepeerd naar roostergroepen valt weer groep C03 in Nijmegen op. Alhoewel een aantal studenten redelijk scoorden op de kennistoetsen (met de eerder beschreven kanttekening bij het resultaat van de eerste kennistoets) heeft zo goed als niemand dit weten te verzilveren in bonuspunten en/of een voldoende resultaat op het schriftelijk tentamen.
+
+Om er achter te komen welke variabelen van invloed kunnen zijn op de prestaties tijdens het schriftelijk tentamen is een logistische regressie uitgevoerd met als exogene variabelen: <em>'vooropleiding'</em>, <em>'eerder behaalde tentamens BEC'</em> en <em>'gemiddelde score kennistoetsen'</em>. Uiteindelijk bleken alleen <em>'eerder behaalde tentamens BEC'</em> en <em>'gemiddelde score kennistoetsen'</em> significant te zijn (p < 0,05).
+
+```{r echo=FALSE, cache=FALSE, comment=NA, results='asis', tidy=FALSE, warning=FALSE, message=FALSE}
+print(scrBGA, 'chart')
+```
+
+Het effect van <em>'eerder behaalde tentamens BEC'</em> blijkt zeer sterk te zijn. Studenten die alle BEC tentamens uit het B-cluster hebben gehaald, hebben een kans van `r round(100*p.Schr.v.BClust.v, 0)`% op een voldoende eindresultaat. Van de studenten die nog tentamens uit het B-cluster open hebben staan, haalt nog maar `r round(100*p.Schr.v.Bclust.o, 0)`% een voldoende op het schriftelijk tentamen.
+
+```{r echo=FALSE, cache=FALSE, comment=NA, results='asis', tidy=FALSE, warning=FALSE, message=FALSE}
+p4$show('inline', include_assets = TRUE, standalone = TRUE)
+```
+
+Uit een [eerdere analyse](https://github.com/witusj/CFA-2/blob/master/WK1%20Analyse/CFA_WK1.pdf?raw=true) bleek dat van de groep C03 uit Nijmegen geen enkele persoon alle eerdere tentamens BEC heeft gehaald, terwijl dit bij de meeste andere roostergroepen eerder een zeldzaam fenomeen is. Waarom deze groep zo slecht scoort op alle BEC tentamens is een onderwerp voor verder onderzoek.

@@ -1,0 +1,11 @@
+base
+datasets
+graphics
+grDevices
+httr
+methods
+shiny
+stats
+utils
+XML
+xtable

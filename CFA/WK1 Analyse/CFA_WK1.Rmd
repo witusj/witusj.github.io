@@ -1,0 +1,73 @@
+---
+title: "Analyse CFA WK1"
+author: "Witek ten Hove"
+date: "Zaterdag, 13 September 2014"
+output: pdf_document
+---
+
+
+```{r, , echo=FALSE, results='hide', warning=FALSE, message=FALSE, cache=FALSE}
+source("RekentoetsAnalyse.R")
+```
+
+In totaal hebben `r stdCnt` studenten (waarvan `r stdCnt-stdCntOv` reguliere) deelgenomen aan de colleges of in ieder geval aan de rekentoets tijdens de colleges.
+```{r echo=FALSE, results='asis', comment=FALSE, warning=FALSE, message=FALSE, cache=FALSE, cache.comments=FALSE}
+    
+             print(xtblKl, comment=FALSE, include.rownames=FALSE, floating = FALSE)
+
+```
+
+__  
+    
+De meeste studenten hebben HAVO als vooropleiding.
+
+```{r echo=FALSE, results='asis', comment=FALSE, warning=FALSE, message=FALSE, cache=FALSE, cache.comments=FALSE}
+    
+             print(xtblOplKl, comment=FALSE, floating = FALSE)
+
+```
+    
+__  
+    
+Een meerderheid van de studenten geeft aan dat ze beide BGA-BEC tentamens hebben gehaald. De groep C03 in Nijmegen valt echter op: daar heeft nog niemand alle BGA-BEC tentamens gehaald.
+
+```{r echo=FALSE, results='asis', comment=FALSE, warning=FALSE, message=FALSE, cache=FALSE, cache.comments=FALSE}
+    
+             print(xtblKlBGA, comment=FALSE, floating = FALSE)
+
+```
+    
+__  
+    
+Tijdens de colleges zijn rekentoetsen afgenomen. Helaas is het niet gelukt om dit bij alle groepen onder gecontroleerde omstandigheden te doen. Alleen bij de groepen N-C02 en N-C03 is dit gelukt (groepen van Witek). Het blijkt dat in deze twee groepen een groot aantal studenten moeite heeft met basisrekenvaardigheden (rekenregels, verhoudingsgetallen, machten en rekenen met symbolen). 
+
+```{r echo=FALSE, results='asis', comment=FALSE, warning=FALSE, message=FALSE, cache=FALSE, cache.comments=FALSE}
+    
+             print(xtblKlSc, comment=FALSE, floating = FALSE)
+
+```
+    
+------------------  
+Met name studenten met HAVO en MBO als vooropleiding hebben het vaakst een achterstand.
+
+```{r echo=FALSE, results='asis', comment=FALSE, warning=FALSE, message=FALSE, cache=FALSE, cache.comments=FALSE}
+    
+             print(xtblOplSc, comment=FALSE, floating = FALSE)
+
+```
+__  
+   
+
+```{r echo=FALSE, results='asis', comment=FALSE, warning=FALSE, message=FALSE, cache=FALSE, cache.comments=FALSE}
+    
+             hist(round(WK1New$Score[WK1New$Klas == "N-C02"|WK1New$Klas == "N-C03"]/10,0)*10,
+                  col = "Red",
+                  main = "Verdeling Scores",
+                  xlab = "Score min/max",
+                  ylab = "Aantal",
+                  labels = TRUE,
+                  ylim = c(0, 20),
+                  right = FALSE)
+
+               
+```
