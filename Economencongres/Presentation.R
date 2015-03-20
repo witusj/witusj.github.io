@@ -123,7 +123,7 @@ gphStudent <- gvisMerge(gphStudent, gphLeuk, horizontal = FALSE)
 
 plot(gphStudent)
 
-## Create wordcloud
+## Create wordcloud for specialization
 library(wordcloud)
 library(RColorBrewer)
 library(gdata)
@@ -139,7 +139,50 @@ words <- table(vect2)
 
 pal <- brewer.pal(8, "Dark2")
 pal <- pal[-(1:2)]
-png("wordcloud.png", width=2500,height=1600)
+png("specialization.png", width=2500,height=1600)
 wordcloud(names(words),as.vector(words), scale=c(10,.7),min.freq=0,max.words=100,
           random.order=T, rot.per=0, colors=pal)
 dev.off()
+
+## Create wordcloud for technology
+library(wordcloud)
+library(RColorBrewer)
+library(gdata)
+
+vect2 <- NULL
+for(i in EcData[, 20]) {
+  vect <- strsplit(i, ",")
+  vect2 <- c(vect2, unlist(vect))
+  vect2 <- trim(vect2)
+  
+}
+words <- table(vect2)
+
+pal <- brewer.pal(8, "Dark2")
+pal <- pal[-(1:2)]
+png("technology.png", width=2500,height=1600)
+wordcloud(names(words),as.vector(words), scale=c(10,.7),min.freq=0,max.words=100,
+          random.order=T, rot.per=0, colors=pal)
+dev.off()
+
+## Create wordcloud for involvement professionals
+library(wordcloud)
+library(RColorBrewer)
+library(gdata)
+
+vect2 <- NULL
+for(i in EcData[, 21]) {
+  vect <- strsplit(i, ",")
+  vect2 <- c(vect2, unlist(vect))
+  vect2 <- trim(vect2)
+  
+}
+words <- table(vect2)
+
+pal <- brewer.pal(8, "Dark2")
+pal <- pal[-(1:2)]
+png("involvement.png", width=2500,height=1600)
+wordcloud(names(words),as.vector(words), scale=c(10,.7),min.freq=0,max.words=100,
+          random.order=T, rot.per=0, colors=pal)
+dev.off()
+
