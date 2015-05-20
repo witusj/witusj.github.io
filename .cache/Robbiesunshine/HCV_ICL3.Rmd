@@ -1,0 +1,117 @@
+Validation of Hepatitis C viral count using R-computing
+========================================================
+
+This is a test
+
+```{r,echo=FALSE, results='hide'}
+
+
+# libraries
+library(ggplot2)
+library(corrgram)
+library(MethComp)
+
+# read file
+source("HCV_ICL3.R")
+View(HCV_ICL3)
+```
+In a summary. The lower limit of detection (LLD) at home-lab is 12 IU/ml and the LLD at the reference-lab os 20 IU/ml. So, if the result is <20IU/ml, the detected value could be anywhere between 1 and 20. Therefore, the lower limit of detection has been set for home-lab at '6 IU/ml' and '10 IU/ml' for the reference lab. 
+
+```{r Summary}
+summary(HCV_ICL3)
+head(HCV_ICL3)
+```
+To make it more easy, the set of values from Reference-lab = 'x'. The set of values from Home-lab = 'y' 
+```{r,echo=FALSE}
+x <- HCV_ICL3$ICL
+y <- HCV_ICL3$BioS
+```
+Calculate the means and difference between the two sets (x and y)
+```{r Mean}
+# derive difference
+mean(x)
+mean(y)
+# mean Ref_lab - mean Home_lab
+mean(x)-mean(y)
+```
+Because n=8 is small, the distribution of the differences should be approximately normal. Check using a boxplot and QQ plot. 
+There is some skew.
+```{r Boxplot}
+boxHCV
+normHCV
+lineHCV
+```
+Shaphiro test of normality. 
+```{r Shapiro}
+shapHCV
+```
+The normality test gives p < 0.001, which is small, so we 
+reject the null hypothesis that the values are distributed normally. 
+
+This means that we cannot use the student t-test. Instead, use the Mann-Whitney-Wilcoxon Test, we can decide whether the population distributions are identical without assuming them to follow the normal distribution.
+```{r Wilcoxon}
+wilcHCV
+```
+p > 0.05 and therefore the H0 is NOT rejected. 
+The two populations are identical.
+
+Just to see what happens in the Student T-test.
+A paired t-test: one sample, two tests
+H0 = no difference; H1 = mean of 2 tests are different
+mu= a number indicating the true value of the mean 
+(or difference in means if you are performing a two sample test).
+```{r t-test}
+studtHCV
+```
+p = 0.8425. Because p is larger than alpha, we do NOT reject H0.
+In other words, it is unlikely the observed agreements happened by chance. 
+However, because the populations do not have a normal distribution, we can not use the outcome if this test.
+
+For correlation, three methods are used: pearson, kendall and spearman at a confidence level of 95%.
+```{r Correlation}
+# correlation of the two methods
+corHCV
+```
+The correlation with the spearman test is 0.9868827. Almost perfect correlation. 
+```{r,echo=FALSE,results="hide"}
+# drop first column
+HCV_ICL3$Nr <- NULL
+```
+Plotting the two methods using logarithmic scales.
+```{r Plotting}
+plot(g)
+```
+Summary data on the correlation line.
+```{r}
+regmod <- lm(y~x, data=HCV_ICL3) ## >> HIER STOND data=HepB_Web ??<<
+summary(regmod)
+```
+The Bland-Altman Analysis. To check if there is a bias.
+```{r, echo=FALSE}
+df
+```
+```{r}
+BlandAltman(x, y,
+            x.name = "Reference lab IU/ml",
+            y.name = "Home lab IU/ml",
+            maintit = "Bland-Altman plot for HBV count",
+            cex = 1,
+            pch = 16,
+            col.points = "black",
+            col.lines = "blue",
+            limx = NULL,
+            limy = NULL,
+            ymax = NULL,
+            eqax = FALSE,
+            xlab = NULL,
+            ylab = NULL,
+            print = TRUE,
+            reg.line = FALSE,
+            digits = 2,
+            mult = FALSE)
+```
+When the dots are around 0, the two test could be interchanged for a patient. So, the two test can be interchanged. There are, however, some outliners: large difference of viral count between the two labs.
+
+
+
+
