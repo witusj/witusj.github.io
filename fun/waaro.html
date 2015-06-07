@@ -75,9 +75,9 @@ img {
 <p>Hallo Robert,</p>
 <p>Ik ben me aan het vervelen en ben maar wat onnuttige zaken aan het doen. Ik kwam deze leuke package tegen. Werkt heel handig als je snel mooie kaartjes wilt maken en data wilt toevoegen:</p>
 <pre class="r"><code>library(leaflet)
-long &lt;- c(4.4775, 5.8860, 4.7390127, 5.861626) # Longitudes voor Leiden, Arnhem, Alkmaar en Nijmegen
-lat &lt;- c(52.1658, 51.9849, 52.6278566, 51.849010) # Idem voor latitudes
-txt &lt;- c(&quot;is Witek&quot;, &quot;is Robert&quot;, &quot;zijn Mila &amp; Nadia&quot;, &quot;zijn Leana &amp; Donya&quot;) # Namen en werkwoord voor in pop-up
+long &lt;- c(4.4775, 5.8860, 4.7390127, 5.861626, 5.752218) # Longitudes voor Leiden, Arnhem, Alkmaar en Nijmegen
+lat &lt;- c(52.1658, 51.9849, 52.6278566, 51.849010, 51.958369) # Idem voor latitudes
+txt &lt;- c(&quot;is Witek&quot;, &quot;is Robert&quot;, &quot;zijn Mila &amp; Nadia&quot;, &quot;zijn Leana &amp; Donya&quot;, &quot;is Desmond&quot;) # Namen en werkwoord voor in pop-up
 txt &lt;- sapply(c(1:length(txt)), function(x) paste0(&quot;Hier &quot;,txt[x], &quot; geboren.&quot;)) # Volledige pop-up tekst
 
 m &lt;- leaflet() %&gt;%
@@ -85,8 +85,8 @@ m &lt;- leaflet() %&gt;%
   addMarkers(lng=long, lat=lat, popup=txt)
   #addMarkers(lng=5.8860, lat=51.9849, popup=&quot;The birthplace of Robert&quot;)
 m  # Print the map</code></pre>
-<p><div id="htmlwidget-593" style="width:672px;height:480px;" class="leaflet"></div>
-<script type="application/json" data-for="htmlwidget-593">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]},{"method":"addMarkers","args":[[52.1658,51.9849,52.6278566,51.84901],[4.4775,5.886,4.7390127,5.861626],null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Hier is Witek geboren.","Hier is Robert geboren.","Hier zijn Mila & Nadia geboren.","Hier zijn Leana & Donya geboren."]]}],"limits":{"lat":[51.84901,52.6278566],"lng":[4.4775,5.886]}},"evals":[]}</script></p>
+<p><div id="htmlwidget-4672" style="width:672px;height:480px;" class="leaflet"></div>
+<script type="application/json" data-for="htmlwidget-4672">{"x":{"calls":[{"method":"addTiles","args":["http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,{"minZoom":0,"maxZoom":18,"maxNativeZoom":null,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"continuousWorld":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":null,"unloadInvisibleTiles":null,"updateWhenIdle":null,"detectRetina":false,"reuseTiles":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>"}]},{"method":"addMarkers","args":[[52.1658,51.9849,52.6278566,51.84901,51.958369],[4.4775,5.886,4.7390127,5.861626,5.752218],null,null,{"clickable":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Hier is Witek geboren.","Hier is Robert geboren.","Hier zijn Mila & Nadia geboren.","Hier zijn Leana & Donya geboren.","Hier is Desmond geboren."]]}],"limits":{"lat":[51.84901,52.6278566],"lng":[4.4775,5.886]}},"evals":[]}</script></p>
 
 
 </div>

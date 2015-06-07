@@ -11,9 +11,9 @@ Ik ben me aan het vervelen en ben maar wat onnuttige zaken aan het doen. Ik kwam
 
 ```{r}
 library(leaflet)
-long <- c(4.4775, 5.8860, 4.7390127, 5.861626) # Longitudes voor Leiden, Arnhem, Alkmaar en Nijmegen
-lat <- c(52.1658, 51.9849, 52.6278566, 51.849010) # Idem voor latitudes
-txt <- c("is Witek", "is Robert", "zijn Mila & Nadia", "zijn Leana & Donya") # Namen en werkwoord voor in pop-up
+long <- c(4.4775, 5.8860, 4.7390127, 5.861626, 5.752218) # Longitudes voor Leiden, Arnhem, Alkmaar en Nijmegen
+lat <- c(52.1658, 51.9849, 52.6278566, 51.849010, 51.958369) # Idem voor latitudes
+txt <- c("is Witek", "is Robert", "zijn Mila & Nadia", "zijn Leana & Donya", "is Desmond") # Namen en werkwoord voor in pop-up
 txt <- sapply(c(1:length(txt)), function(x) paste0("Hier ",txt[x], " geboren.")) # Volledige pop-up tekst
 
 m <- leaflet() %>%
