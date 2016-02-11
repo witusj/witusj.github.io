@@ -11,7 +11,7 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 --- .class #slide1
 
-## "The value is in the data"
+## The value is in the data
 
 <style>
 #slide1 {
@@ -24,8 +24,16 @@ knit        : slidify::knit2slides
 
 --- .class #slide2 
 
-## Slide 2
+## But how do you harvest it?
 
+<style>
+#slide2 {
+  background-image:url("assets/img/harvest.jpg"); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+</style>
 
 
 
