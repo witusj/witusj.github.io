@@ -91,7 +91,7 @@ knit        : slidify::knit2slides
 <ul>
   <li>Beslist rationeel</li>
   <li><b>Niet</b> altruistisch</li>
-  <li>Optimaliseert persoonlijk nut</li>
+  <li>Optimaliseert nut</li>
 </ul>
 
 </div>
@@ -105,7 +105,7 @@ knit        : slidify::knit2slides
 </style>
 
 <div style='float:left;width:50%;background-image: url("assets/img/exchange.jpg"); height: 650px; width: 500px;color:#FFF;'>
- <h2>C-cluster: Financiele Analyse</h2>
+ <h2>C-Cluster: Financiele Analyse</h2>
 </div>
 <div style='float:right;width:47%;'>
 
@@ -124,7 +124,7 @@ knit        : slidify::knit2slides
 </style>
 
 <div style='float:left;width:50%;background-image: url("assets/img/production.jpg"); height: 650px; width: 500px;color:#FFF;'>
- <h2>D-cluster: Planning & Control</h2>
+ <h2>D-Cluster: Planning & Control</h2>
 </div>
 <div style='float:right;width:47%;'>
 
@@ -144,7 +144,7 @@ knit        : slidify::knit2slides
 </style>
 
 <div style='float:left;width:50%;background-image: url("assets/img/watson.png"); height: 650px; width: 500px;color:#FFF;'>
- <h2>E-cluster: Innovatie- Management</h2>
+ <h2>E-Cluster: Innovatie- Management</h2>
 </div>
 <div style='float:right;width:47%;'>
 
