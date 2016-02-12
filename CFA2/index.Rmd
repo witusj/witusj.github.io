@@ -144,7 +144,7 @@ knit        : slidify::knit2slides
 </style>
 
 <div style='float:left;width:50%;background-image: url("assets/img/watson.png"); height: 650px; width: 500px;color:#FFF;'>
- <h2>E-Cluster: Innovatie- Management</h2>
+ <h2>E-Cluster: Innovatie- & Verander- Management </h2>
 </div>
 <div style='float:right;width:47%;'>
 
@@ -154,6 +154,7 @@ knit        : slidify::knit2slides
      <li>Tactisch</li>
      <li>Strategisch</li>
   </ul>
+  <li>Behavioral Economics</li>
 </ul>
 
 </div>
