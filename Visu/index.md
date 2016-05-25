@@ -1075,7 +1075,7 @@ ui <- shinyUI(fluidPage(
 
 
 ```r
-server <- shinyServer(function(input, output) { ## Begin of server
+server <- shinyServer(function(input, output) { ## Start of server
   
 ## Subset the initial data frame by the values of the selected checkboxes
 df <- reactive({
